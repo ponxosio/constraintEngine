@@ -27,15 +27,6 @@ TEMPLATE = lib
 
 DEFINES += CONSTRAINTSENGINELIBRARY_LIBRARY
 
-SOURCES += \
-    prologexecutor.cpp \
-    prologtranslationstack.cpp
-
-HEADERS +=\
-        constraintsenginelibrary_global.h \
-    prologexecutor.h \
-    prologtranslationstack.h
-
 unix {
     target.path = /usr/lib
     INSTALLS += target
@@ -56,4 +47,13 @@ debug {
 INCLUDEPATH += X:\swipl\include
 LIBS += -L$$quote(X:\swipl\bin) -llibswipl
 LIBS += -L$$quote(X:\swipl\lib) -llibswipl
+
+HEADERS += \
+    constraintengine/constraintsenginelibrary_global.h \
+    constraintengine/prologexecutor.h \
+    constraintengine/prologtranslationstack.h
+
+SOURCES += \
+    constraintengine/prologexecutor.cpp \
+    constraintengine/prologtranslationstack.cpp
 

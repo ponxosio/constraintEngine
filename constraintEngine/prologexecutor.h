@@ -10,9 +10,9 @@
 
 #include <SWI-cpp.h>
 
-#include <constraintssolverinterface/routingengine.h>
+#include <fluidicmachinemodel/constraintssolverinterface/routingengine.h>
 
-#include "constraintsenginelibrary_global.h"
+#include "constraintengine/constraintsenginelibrary_global.h"
 
 /**
  * @brief The PrologExecutor class connects with the SWI-Prolog clpfd library that is use as constraint solver.
