@@ -235,7 +235,7 @@ public:
      *
      * @return pair of strings that wraps the operand and represents the corresponding unary operation.
      */
-    std::tuple<std::string,std::string> unaryOpToStr(UnaryOperation::UnaryOperators op);
+    std::tuple<std::string,std::string> unaryOpToStr(RuleUnaryOperation::UnaryOperators op);
     /**
      * @brief equalityOPtoStr returns the string that match the corresponding comparation operation.
      *
