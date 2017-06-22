@@ -8,6 +8,7 @@
 
 #include <QTemporaryFile>
 
+#define PL_SAFE_ARG_MACROS //define this flag so SWI-cpp macros dont colide with boost one
 #include <SWI-cpp.h>
 
 #include <fluidicmachinemodel/constraintssolverinterface/routingengine.h>
