@@ -31,7 +31,8 @@ PrologExecutor::PrologExecutor(std::unique_ptr<QTemporaryFile> temporaryFile, co
     this->file = std::move(temporaryFile);
 
     try {
-        PlCall(std::string("consult(\"" + file->fileName().toStdString() + "\").").c_str());
+        std::string command = std::string("consult(\"" + file->fileName().toStdString() + "\").");
+        PlCall(command.c_str());
     } catch (PlException ex) {
         throw(std::runtime_error("PrologExecutor::PrologExecutor(). Exception at the Prolog constraints engine. Impossible to read temporaryFile, message: " + std::string((char*) ex)));
     }
