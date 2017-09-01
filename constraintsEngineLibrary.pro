@@ -35,12 +35,14 @@ unix {
 debug {
     QMAKE_POST_LINK=X:\constraintsEngine\constraintEngine\setDLL.bat $$shell_path($$OUT_PWD/debug) debug
     INCLUDEPATH += X:\fluidicMachineModel\dll_debug\include
+
     LIBS += -L$$quote(X:\fluidicMachineModel\dll_debug\bin) -lFluidicMachineModel
 }
 
 !debug {
     QMAKE_POST_LINK=X:\constraintsEngine\constraintEngine\setDLL.bat $$shell_path($$OUT_PWD/release) release
     INCLUDEPATH += X:\fluidicMachineModel\dll_release\include
+
     LIBS += -L$$quote(X:\fluidicMachineModel\dll_release\bin) -lFluidicMachineModel
 }
 
