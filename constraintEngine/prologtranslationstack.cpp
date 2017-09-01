@@ -191,7 +191,7 @@ std::string PrologTranslationStack::generateLabelingFoot() {
             } else {
                 lastWasValve = true;
             }
-            streamMin  << var;
+            streamMin  << "min(" << var << ", 1)";
             streamName << var;
         }
     }

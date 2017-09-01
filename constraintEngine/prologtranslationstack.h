@@ -175,6 +175,7 @@ public:
      * @sa http://www.swi-prolog.org/pldoc/man?predicate=labeling/2
      */
     std::string generateLabelingFoot();
+
     inline const std::vector<std::string> & getTranslatedRestriction() const {
         return actualRestriction;
     }
